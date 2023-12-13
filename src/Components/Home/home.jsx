@@ -7,7 +7,6 @@ const Home = () => {
 
     const getAllUsers = async () => {
         const response = await getUsers();
-        console.log("Data: ", response.data);
         setUsers(response.data);
     }
 
@@ -76,10 +75,6 @@ const Home = () => {
     useEffect(() => {
         getAllUsers();
     }, []);
-
-    useEffect(() => {
-        console.log("Users: ", users);
-    }, [users])
 
     return (
         <div>

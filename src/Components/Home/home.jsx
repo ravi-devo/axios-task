@@ -84,18 +84,23 @@ const Home = () => {
     return (
         <div>
             <h1>Axios Task</h1>
-            <button onClick={createUser}>Add a new user</button>
-            <button onClick={updateExistingUser}>Update user</button>
-            <button onClick={deleteUserById}>Delete user</button>
-            {users.map((user, index) => (
-                <div className="user" key={index}> 
-                    <div className="name">Name: {user.name}</div>
-                    <div className="email">Email: {user.email}</div>
-                    <div className="phoneNumber">Phone number: {user.phone}</div>
-                    <div className="address"></div>
-                    <div className="website">Website: {user.website}</div>
-                </div>
-            ))}
+            <div className="buttons">
+                <button className="btn addUser" onClick={createUser}>Add a new user</button>
+                <button className="btn updateUser" onClick={updateExistingUser}>Update user</button>
+                <button className="btn deleteUser" onClick={deleteUserById}>Delete user</button>
+            </div>
+            <h2>User details are fetched from mock API using axios. </h2>
+            <div className="users">
+                {users.map((user, index) => (
+                    <div className="user" key={index}>
+                        <div><span className="details name">Name: </span>{user.name}</div>
+                        <div><span className="details email">Email: </span>{user.email}</div>
+                        <div><span className="details phoneNumber">Phone number: </span>{user.phone}</div>
+                        <div><span className="details website">Company: </span>{user.company.name}</div>
+                    </div>
+                ))}
+            </div>
+
         </div>
     );
 }

@@ -1,0 +1,40 @@
+.users{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin: 3em;
+    justify-content: center;
+}
+
+.user{
+    border: 2px solid brown;
+    padding: 0.5em 1em;
+    min-height: 8rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-radius: 1em;
+    box-shadow: 5px 8px burlywood;
+}
+
+.details{
+    font-weight: bold;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.btn{
+    width: fit-content;
+    background-color: brown;
+    padding: 0.5em 1em;
+    color: white;
+    margin: 0 0.5em;
+    border-radius: 0.5em;
+    border: none;
+}

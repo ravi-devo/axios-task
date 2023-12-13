@@ -12,7 +12,6 @@ const Home = () => {
 
     const createUser = async () => {
         const payload = {
-            "id": 1,
             "name": "Leanne Graham",
             "username": "Bret",
             "email": "Sincere@april.biz",
@@ -41,7 +40,7 @@ const Home = () => {
 
     const updateExistingUser = async () => {
         const payload = {
-            "name": "Leanne Graham",
+            "name": "Bret Graham",
             "username": "Bret",
             "email": "Sincere@april.biz",
             "address": {
@@ -64,7 +63,7 @@ const Home = () => {
         };
 
         const response = await updateUser(1, payload);
-        console.log("The existing user is updated using axios", response.data);
+        console.log("The existing user's name is updated using axios", response.data);
     }
 
     const deleteUserById = async () => {
